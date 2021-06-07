@@ -18,3 +18,6 @@ sudo chown $USER /usr/local/bin/protoc
 sudo chown -R $USER /usr/local/include/google
 
 sudo ldconfig
+
+# specify go generator version
+# GO111MODULE=on go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26.0

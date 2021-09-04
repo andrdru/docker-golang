@@ -1,5 +1,5 @@
 #! /bin/bash
-PROTOC_VERSION=3.15.7
+PROTOC_VERSION=3.13.0
 
 # Make sure you grab the latest version
 curl -OL https://github.com/google/protobuf/releases/download/v$PROTOC_VERSION/protoc-$PROTOC_VERSION-linux-x86_64.zip

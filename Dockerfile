@@ -10,4 +10,4 @@ RUN apk --update --no-cache  add bash openssh sshpass git make findutils protobu
     go get github.com/golang/protobuf/protoc-gen-go && cp /go/bin/protoc-gen-go /usr/bin/ &&\
     go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest &&\
     wget -O /usr/bin/protoc-gen-grpc-web https://github.com/grpc/grpc-web/releases/download/1.2.1/protoc-gen-grpc-web-1.2.1-linux-x86_64  && chmod +x /usr/bin/protoc-gen-grpc-web &&\
-    chmod 777 -R /go
+    chmod 777 -R /go && mkdir -p /.cache && chmod 777 -R /.cache

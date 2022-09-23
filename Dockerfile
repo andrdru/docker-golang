@@ -1,6 +1,6 @@
-FROM golang:1.18-alpine3.16
+FROM golang:1.19-alpine3.16
 
-RUN apk --update --no-cache  add bash openssh sshpass git make findutils protobuf=3.18.1-r2 protobuf-dev=3.18.1-r2 &&\
+RUN apk --update --no-cache  add bash openssh sshpass git make findutils gcc musl-dev protobuf=3.18.1-r2 protobuf-dev=3.18.1-r2 &&\
     go install github.com/a8m/envsubst/cmd/envsubst@latest &&\
     go install github.com/andrdru/migrate@v1.0.3 &&\
     wget -O- https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.46.2 &&\
